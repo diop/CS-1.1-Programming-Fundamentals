@@ -79,8 +79,7 @@ class Simulation(object):
         self.virus_name = virus_name
         self.mortality_rate = mortality_rate
         self.basic_repro_num = basic_repro_num
-        self.file_name = "{}_simulation_pop_{}_vp_{}_infected_{}.txt".format(
-            virus_name, population_size, vacc_percentage, initial_infected)
+        self.file_name = f'''{virus_name}_simulation_pop_{population_size}_vp_{vacc_percentage}_infected_{initial_infected}.txt'''
 
         # TODO: Create a Logger object and bind it to self.logger.  You should use this
         # logger object to log all events of any importance during the simulation.  Don't forget
@@ -151,7 +150,7 @@ class Simulation(object):
         # round of this simulation.  At the end of each iteration of this loop, remember
         # to rebind should_continue to another call of self._simulation_should_continue()!
             pass
-        print('The simulation has ended after {time_step_counter} turns.'.format(time_step_counter))
+        print(f'''The simulation has ended after {time_step_counter} turns.''')
 
     def time_step(self):
         # TODO: Finish this method!  This method should contain all the basic logic
@@ -198,8 +197,9 @@ class Simulation(object):
         #   - Set this Person's .infected attribute to True.
         # NOTE: Once you have iterated through the entire list of self.newly_infected, remember
         # to reset self.newly_infected back to an empty list!
+        pass
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     params = sys.argv[1:]
     pop_size = int(params[0])
     vacc_percentage = float(params[1])
