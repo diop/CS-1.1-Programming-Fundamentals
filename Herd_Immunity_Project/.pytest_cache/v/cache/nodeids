@@ -1,0 +1,13 @@
+[
+  "logger_test.py::test_write_metadata",
+  "logger_test.py::test_log_interaction",
+  "logger_test.py::test_log_infection_survival",
+  "logger_test.py::test_log_time_step",
+  "person_test.py::test_did_survive_infection",
+  "simulation_test.py::test_create_population",
+  "simulation_test.py::test_simulation_should_continue",
+  "simulation_test.py::test_run",
+  "simulation_test.py::test_time_step",
+  "simulation_test.py::test_interactions",
+  "simulation_test.py::test_infect_newly_infected"
+]
