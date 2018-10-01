@@ -10,5 +10,6 @@
   "simulation_test.py::test_run",
   "simulation_test.py::test_time_step",
   "simulation_test.py::test_interactions",
-  "simulation_test.py::test_infect_newly_infected"
+  "simulation_test.py::test_infect_newly_infected",
+  "virus_test.py::test_virus_instantiation"
 ]
