@@ -30,10 +30,10 @@ class Person(object):
         '''
         # TODO:  Finish this method.  Follow the instructions in the class documentation
         # to set the corret values for the following attributes.
-        self._id = None
-        self.is_vaccinated = None
+        self._id = _id
+        self.is_vaccinated = is_vaccinated
         self.is_alive = True
-        self.infected = None
+        self.infected = infected
 
     def did_survive_infection():
         '''
@@ -52,4 +52,13 @@ class Person(object):
         # for resolve_infection.  If person dies, set is_alive to False and return False.
         # If person lives, set is_vaccinated = True, infected = None, return True.
         if not self.infected:
-            random_num = random.randint(0,1)
+            # Define what mortality_rate is
+            mortality_rate = random.uniform(0,1)
+            random_float = random.uniform(0,1)
+            if random_float < motality_rate:
+                self.alive = false
+                return False
+            else:
+                self.vaccinated = True
+                self.infected = False
+                return True
