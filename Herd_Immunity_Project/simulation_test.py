@@ -1,10 +1,10 @@
 from person import Person
 from simulation import Simulation
 from logger import Logger
-from virus import Virus
 import pytest
 import io
 import sys
+
 
 # Test Simulation Class
 def test_create_population():

@@ -1,3 +1,6 @@
+import io
+import sys
+
 class Logger(object):
     '''
     Utility class responsible for logging all interactions of note during the
@@ -19,6 +22,11 @@ class Logger(object):
         # full file name of the file that the logs will be written to.
         self.file_name = file_name
 
+        f = open(self.file_name, mode='w+')
+        print(f.read())
+        f.write('...\n')
+        f.close()
+
     def write_metadata(self, pop_size, vacc_percentage, virus_name, mortality_rate,
                        basic_repro_num):
         '''
@@ -37,9 +45,7 @@ class Logger(object):
         # since 'w' overwrites the file.
         # NOTE: Make sure to end every line with a '/n' character to ensure that each
         # event logged ends up on a separate line!
-        with open(self.filename) as f:
-            f.open(self.filename, mode='w')
-            f.write('pop_size' + '\t' + 'vacc_percentage' + '\t' + 'virus_name' + '\t' + 'mortality_rate' + '\t' + 'basic_repro_num')
+        pass
 
     def log_interaction(self, person1, person2, did_infect=None,
                         person2_vacc=None, person2_sick=None):
