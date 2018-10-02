@@ -10,17 +10,19 @@ import os.path
 # Test Logger Class
 
 def test_create_file():
-    # Test the creation of the text file on disk.
-    file_name = 'log-test.txt'
-    # assert not os.path.isfile(file_name)
+    file_name = 'logs.txt'
     logger = Logger(file_name)
+    # Maybe delete file after creation
+    # Then test that it was actually deleted.
+    # assert not os.path.isfile(file_name)
+
     assert os.path.isfile(file_name)
 
-    # logger.write_metadata(logger.pop_size, logger.vacc_percentage, logger.virus_name, logger.mortality_rate, logger.basic_repro_num)
-
-
 def test_write_metadata():
-    pass
+    file_name = 'logs.txt'
+    logger = Logger(file_name)
+    logger.write_metadata(1000,50,'Melissa', 0.8, 1.1)
+
 
 def test_log_interaction():
     pass

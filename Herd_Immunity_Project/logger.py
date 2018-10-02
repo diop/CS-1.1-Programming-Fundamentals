@@ -24,7 +24,6 @@ class Logger(object):
 
         f = open(self.file_name, mode='w+')
         print(f.read())
-        f.write('...\n')
         f.close()
 
     def write_metadata(self, pop_size, vacc_percentage, virus_name, mortality_rate,
@@ -45,7 +44,9 @@ class Logger(object):
         # since 'w' overwrites the file.
         # NOTE: Make sure to end every line with a '/n' character to ensure that each
         # event logged ends up on a separate line!
-        pass
+        with open(self.file_name, mode='w') as f:
+            header = f'''Population Size: {pop_size} \t Vaccination Percentage: {vacc_percentage} \t Virus Name: {virus_name} \t Mortality Rate: {mortality_rate} \t Basic Reproduction Number: {basic_repro_num} \t'''
+            f.write(header)
 
     def log_interaction(self, person1, person2, did_infect=None,
                         person2_vacc=None, person2_sick=None):
