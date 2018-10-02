@@ -6,6 +6,10 @@ import io
 import sys
 
 # Test Logger Class
+ 
+def test_create_file():
+    # Test the creation of the text file on disk.
+    pass
 
 def test_write_metadata():
     pass

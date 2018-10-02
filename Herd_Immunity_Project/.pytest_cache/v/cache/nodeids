@@ -1,4 +1,5 @@
 [
+  "logger_test.py::test_create_file",
   "logger_test.py::test_write_metadata",
   "logger_test.py::test_log_interaction",
   "logger_test.py::test_log_infection_survival",

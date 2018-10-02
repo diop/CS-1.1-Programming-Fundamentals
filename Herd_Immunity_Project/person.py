@@ -36,7 +36,7 @@ class Person(object):
         self.is_alive = True
         self.infected = infected
 
-    def did_survive_infection():
+    def did_survive_infection(self):
         '''
         did_survive_infection(self):
             - Only called if infection attribute is not None.
@@ -52,14 +52,13 @@ class Person(object):
         # TODO:  Finish this method. Follow the instructions in the class documentation
         # for resolve_infection.  If person dies, set is_alive to False and return False.
         # If person lives, set is_vaccinated = True, infected = None, return True.
+        mortality_rate = self.infected.mortality_rate
         if not self.infected:
-            # Define what mortality_rate is
-            mortality_rate = random.uniform(0,1)
-            random_float = random.uniform(0,1)
-            if random_float < motality_rate:
-                self.alive = false
-                return False
-            else:
+            random_float = random.random()
+            if random_float > motality_rate:
                 self.vaccinated = True
-                self.infected = False
+                self.infected = None
                 return True
+            else:
+                self.is_alive = False
+                return False
