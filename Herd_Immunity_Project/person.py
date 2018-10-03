@@ -19,9 +19,9 @@ class Person(object):
     '''
 
     # _____Methods_____:
-    def __init__(self, _id, is_vaccinated, infected=None):
+    def __init__(self, _id, is_vaccinated, infection=None):
         '''
-        __init__(self, _id, is_vaccinated, infected=False):
+        __init__(self, _id, is_vaccinated, infected=None):
             - self.alive should be automatically set to true during instantiation.
             - all other attributes for self should be set to their corresponding parameter
                 passed during instantiation.
@@ -34,7 +34,7 @@ class Person(object):
         self._id = _id
         self.is_vaccinated = is_vaccinated
         self.is_alive = True
-        self.infected = infected
+        self.infection = infection
 
     def did_survive_infection(self):
         '''
@@ -52,11 +52,12 @@ class Person(object):
         # TODO:  Finish this method. Follow the instructions in the class documentation
         # for resolve_infection.  If person dies, set is_alive to False and return False.
         # If person lives, set is_vaccinated = True, infected = None, return True.
-        mortality_rate = self.infected.mortality_rate
-        if not self.infected:
+        mortality_rate = self.infection.mortality_rate
+        print('mortality  -->', mortality_rate)
+        if self.infection:
             random_float = random.random()
-            if random_float > motality_rate:
-                self.vaccinated = True
+            if random_float > mortality_rate:
+                self.is_vaccinated = True
                 self.infected = None
                 return True
             else:

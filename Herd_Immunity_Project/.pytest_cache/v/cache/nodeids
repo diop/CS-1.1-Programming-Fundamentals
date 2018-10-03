@@ -1,7 +1,4 @@
 [
-  "logger_test.py::test_create_file",
-  "logger_test.py::test_write_metadata",
-  "logger_test.py::test_log_interaction",
-  "logger_test.py::test_log_infection_survival",
-  "logger_test.py::test_log_time_step"
+  "person_test.py::test_person_instance",
+  "person_test.py::test_did_survive_infection"
 ]
